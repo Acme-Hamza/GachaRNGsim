@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Pulls Simulator</title>
+    <link rel="stylesheet" href="resources/styles.css">
+</head>
+<body>
+    <div class="background">
+       <!-- Set Wishes and Pity Controls Section above the Banner -->
+<div class="wish-setup-container">
+    <div class="wish-setup">
+        <p>Enter wishes available:</p>
+        <input type="number" id="availableWishes" placeholder="Wishes" min="0">
+        <button onclick="setWishes()">Set Pulls</button>
+    </div>
+
+    <div class="pity-controls">
+        <label for="pityInput">Set Pity:</label>
+        <input type="number" id="pityInput" min="0" placeholder="Enter your current pity">
+        <button onclick="setPity()">Set Pity</button>
+    </div>
+</div>
+
+        
+        <!-- Banner Section -->
+        <div class="banner">
+            <!-- Banner content stays the same -->
+        </div>
+
+        <!-- Wish Buttons beneath the Banner -->
+        <div class="wish-controls">
+            <button class="wish-button" onclick="makeWish(1)">Pull x1</button>
+            <button class="wish-button" onclick="makeWish(10)">Pulls x10</button>
+        </div>
+
+        <!-- Tracker and Results Side by Side -->
+        <div class="side-by-side">
+            <div class="tracker">
+                <h3>Pulls Tracker</h3>
+                <p>Pulls Made: <span id="wishesMade">0</span></p>
+                <p>Pulls Left: <span id="wishesLeft">0</span></p>
+                <p>Total Epic Pulls: <span id="total-4-star">0</span></p>
+                <p>Total Legendary Pulls: <span id="total-5-star">0</span></p>
+                <p>Featured Epic Pulls: <span id="featured-4-star">0</span></p>
+                <p>Featured Legendary Exclusive Pulls: <span id="featured-5-star">0</span></p>
+            </div>
+
+            <div class="results">
+                <h2>Results:</h2>
+                <p id="results">Your results will appear here!</p>
+                <h3>Legendary Exclusive Featured Characters:</h3>
+                <p id="featuredResults">No Legendary Exclusive featured characters yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="resources/wishing.js"></script>
+</body>
+</html>
